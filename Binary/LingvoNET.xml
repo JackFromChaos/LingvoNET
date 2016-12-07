@@ -1,0 +1,599 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LingvoNET</name>
+    </assembly>
+    <members>
+        <member name="T:LingvoNET.Verbs">
+            <summary>
+            Словарь глаголов
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verbs.FindSimilar(System.String,LingvoNET.VerbAspect)">
+            <summary>
+            Поиск по точному или приблизительному совпадению
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verbs.FindSimilar(System.String,System.Predicate{LingvoNET.Verb})">
+            <summary>
+            Поиск по точному или приблизительному совпадению
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verbs.FindOne(System.String,LingvoNET.VerbAspect)">
+            <summary>
+            Поиск одного точного совпадения. Null - если не найдено.
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verbs.FindAll(System.String)">
+            <summary>
+            Поиск всех точных совпадений(омонимов).
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verbs.GetAll">
+            <summary>
+            Возвращает все слова
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Verbs.ToBe">
+            <summary>
+            Глагол 'быть'
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Verb">
+            <summary>
+            Глагол и его словоформы
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.Gerund(LingvoNET.Tense)">
+            <summary>
+            Деепричастие (спряжение по времени)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.Imperative(LingvoNET.Voice,LingvoNET.Number)">
+            <summary>
+            Указательная форма глагола (спряжение по залогу и числу)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.Past(LingvoNET.Voice,LingvoNET.Gender)">
+            <summary>
+            Прошедшее время глагола (спряжение по залогу и роду)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.Subjunctive(LingvoNET.Voice,LingvoNET.Gender)">
+            <summary>
+            Сослагательное/условное наклонение
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.Future(LingvoNET.Voice,LingvoNET.Person,LingvoNET.Number)">
+            <summary>
+            Будущее время глагола - со вспомогательным словом (спряжение по залогу, лицу и числу)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.FuturePerfect(LingvoNET.Voice,LingvoNET.Person,LingvoNET.Number)">
+            <summary>
+            Будущее время глагола - в виде глагла совершенного вида (спряжение по залогу, лицу и числу)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.Infinitive(LingvoNET.Voice)">
+            <summary>
+            Неопределенная форма (по залогу)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.Participle(LingvoNET.Voice,LingvoNET.Case,LingvoNET.Gender,LingvoNET.Tense)">
+            <summary>
+            Причастие (спряжение по залогу, падежу, роду и времени)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.Perfect(LingvoNET.Voice)">
+            <summary>
+            Совершенная форма глагола
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Verb.Perfects(LingvoNET.Voice)">
+            <summary>
+            Совершенные формы глагола
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Verb.Word">
+            <summary>
+            Исходная форма
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Verb.Inexact">
+            <summary>
+            Результат не точен и был получен по похожему слову
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Verb.Aspect">
+            <summary>
+            Вид глагола
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Verb.Transition">
+            <summary>
+            Транзитивность глагола
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Verb.Item(LingvoNET.Voice,LingvoNET.Person,LingvoNET.Number)">
+            <summary>
+            Словоформы глагола по залогу, лицу и числу
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Stemmer">
+            <summary>
+            Стеммер Портера
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Stemmer.Stemm(System.String)">
+            <summary>
+            Parses stemm of the word
+            </summary>
+            <param name="word"></param>
+            <returns>Stemm of the word</returns>
+        </member>
+        <member name="T:LingvoNET.Nouns">
+            <summary>
+            Словарь существительных
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Nouns.FindSimilar(System.String,LingvoNET.Gender,LingvoNET.Animacy)">
+            <summary>
+            Поиск по точному или приблизительному совпадению
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Nouns.FindSimilar(System.String,System.Predicate{LingvoNET.Noun})">
+            <summary>
+            Поиск по точному или приблизительному совпадению
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Nouns.FindOne(System.String,LingvoNET.Gender,LingvoNET.Animacy)">
+            <summary>
+            Поиск одного точного совпадения. Null - если не найдено.
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Nouns.FindAll(System.String)">
+            <summary>
+            Поиск всех точных совпадений(омонимов).
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Nouns.GetAll">
+            <summary>
+            Возвращает все слова
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Noun">
+            <summary>
+            Существительное и его словоформы
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Noun.Word">
+            <summary>
+            Исходная форма
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Noun.Gender">
+            <summary>
+            Род, число, одушевленность
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Noun.Inexact">
+            <summary>
+            Результат не точен и был получен по похожему слову
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Noun.Item(LingvoNET.Case,LingvoNET.Number)">
+            <summary>
+            Словоформы по падежам и числам
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Adjectives">
+            <summary>
+            Словарь прилагательных
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Adjectives.FindSimilar(System.String,LingvoNET.Comparability)">
+            <summary>
+            Поиск по точному или приблизительному совпадению
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Adjectives.FindSimilar(System.String,System.Predicate{LingvoNET.Adjective})">
+            <summary>
+            Поиск по точному или приблизительному совпадению
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Adjectives.FindOne(System.String,LingvoNET.Comparability)">
+            <summary>
+            Поиск одного точного совпадения. Null - если не найдено.
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Adjectives.FindAll(System.String)">
+            <summary>
+            Поиск всех точных совпадений(омонимов).
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Adjectives.GetAll">
+            <summary>
+            Возвращает все слова
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Adjective">
+            <summary>
+            Прилагательное и его словоформы
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Adjective.Word">
+            <summary>
+            Исходная форма
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Adjective.Inexact">
+            <summary>
+            Результат не точен и был получен по похожему слову
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Adjective.Comparability">
+            <summary>
+            Разряд прилагательного
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Adjective.Item(LingvoNET.Case,LingvoNET.Gender)">
+            <summary>
+            Словоформы по падежам, родам и числам
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Adjective.Item(LingvoNET.Comparison)">
+            <summary>
+            Сравнительные степени прилагательного
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Adverbs">
+            <summary>
+            Словарь наречий
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Adverb">
+            <summary>
+            Наречие
+            </summary>
+        </member>
+        <member name="P:LingvoNET.Adverb.Comparability">
+            <summary>
+            Разряд наречия
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Pronouns">
+            <summary>
+            Местоимения
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Pronouns.Personal(LingvoNET.Case,LingvoNET.Person,LingvoNET.Gender,System.Boolean)">
+            <summary>
+            Личные местоимения (я, ты, он, она, они, и т.д.)
+            </summary>
+            <param name="gender">Род только для 3 лица</param>
+            <param name="preposition">С предлогом</param>
+        </member>
+        <member name="M:LingvoNET.Pronouns.Reflexive(LingvoNET.Case)">
+            <summary>
+            Возвратные местоимения (себя)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.Pronouns.Possessive(LingvoNET.Case,LingvoNET.Person,LingvoNET.Gender,LingvoNET.Number)">
+            <summary>
+            Притяжательные местоимения (мой, твой, его, и т.д.)
+            </summary>
+            <param name="person">Лицо говорящего. Не используется для number = Number.Plural</param>
+            <param name="number">Число (ед: мой твой его, множ: ваш)</param>
+        </member>
+        <member name="M:LingvoNET.Pronouns.PossessiveReflexive(LingvoNET.Case,LingvoNET.Gender)">
+            <summary>
+            Притяжательные возвратные (свой, своя, свое и т.д.)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.ExtensionHelper.Animacy(LingvoNET.Gender)">
+            <summary>
+            Одушевленность
+            </summary>
+        </member>
+        <member name="M:LingvoNET.ExtensionHelper.Gen(LingvoNET.Gender)">
+            <summary>
+            Род без учета одушевленности (возвращает F, M, N или P)
+            </summary>
+        </member>
+        <member name="M:LingvoNET.ExtensionHelper.Number(LingvoNET.Gender)">
+            <summary>
+            Число без учета рода и одушеленности
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Gender">
+            <summary>
+            Род, число и одушевленность
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.M">
+            <summary>
+            Мужской род
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.F">
+            <summary>
+            Женский род
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.N">
+            <summary>
+            Средний род
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.P">
+            <summary>
+            Множественное число
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.MA">
+            <summary>
+            Мужской, одушевленное
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.FA">
+            <summary>
+            Женский, одушевленное
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.NA">
+            <summary>
+            Средний, одушевленное
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.MAFA">
+            <summary>
+            Общий род, одушевленное 
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.PA">
+            <summary>
+            Множественное число, одушевленное
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Gender.Undefined">
+            <summary>
+            Неопределенный
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Animacy">
+            <summary>
+            Одушевленность
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Animacy.Inanimate">
+            <summary>
+            Неодушевленное
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Animacy.Animate">
+            <summary>
+            Одушевленное
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Animacy.Undefined">
+            <summary>
+            Неопределенное
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Number">
+            <summary>
+            Чмсло
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Number.Singular">
+            <summary>
+            Единственное
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Number.Plural">
+            <summary>
+            Множественное
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Number.Undefined">
+            <summary>
+            Неопределенное
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Case">
+            <summary>
+            Падеж
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Case.Nominative">
+            <summary>
+            Именительный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Case.Genitive">
+            <summary>
+            Родительный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Case.Dative">
+            <summary>
+            Дательный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Case.Accusative">
+            <summary>
+            Винительный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Case.Instrumental">
+            <summary>
+            Творительный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Case.Locative">
+            <summary>
+            Предложный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Case.Short">
+            <summary>
+            Краткая форма
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Case.Undefined">
+            <summary>
+            Неопределенный
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Comparability">
+            <summary>
+            Разряд прилагательного
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Comparability.Comparable">
+            <summary>
+            Качественное (сравнимое)
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Comparability.Incomparable">
+            <summary>
+            Относительное (несравнимое)
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Comparability.Undefined">
+            <summary>
+            Неопределенный
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Comparison">
+            <summary>
+            Степени сравнения
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Person">
+            <summary>
+            Лицо
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Person.First">
+            <summary>
+            Первое лицо
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Person.Second">
+            <summary>
+            Второе лицо
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Person.Third">
+            <summary>
+            Третье лицо
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Person.Undefined">
+            <summary>
+            Неопределенное
+            </summary>
+        </member>
+        <member name="T:LingvoNET.VerbAspect">
+            <summary>
+            Вид глагола
+            </summary>
+        </member>
+        <member name="F:LingvoNET.VerbAspect.Imperfect">
+            <summary>
+            Несовершенный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.VerbAspect.Perfect">
+            <summary>
+            Совершенный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.VerbAspect.PerfectImperfect">
+            <summary>
+            Совершенно-несовершенный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.VerbAspect.Undefined">
+            <summary>
+            Неопределенный
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Voice">
+            <summary>
+            Залог
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Voice.Active">
+            <summary>
+            Активный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Voice.Passive">
+            <summary>
+            Пассивный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Voice.Undefined">
+            <summary>
+            Неопределенный
+            </summary>
+        </member>
+        <member name="T:LingvoNET.Tense">
+            <summary>
+            Время
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Tense.Present">
+            <summary>
+            Настоящее
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Tense.Past">
+            <summary>
+            Прошлое
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Tense.Future">
+            <summary>
+            Будущее
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Tense.Infinitive">
+            <summary>
+            Неопределенная форма (инфинитив)
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Tense.Subjunctive">
+            <summary>
+            Сослагательное наклонение
+            </summary>
+        </member>
+        <member name="F:LingvoNET.Tense.Undefined">
+            <summary>
+            Неопределенное
+            </summary>
+        </member>
+        <member name="T:LingvoNET.VerbTransition">
+            <summary>
+            Валентность глагола
+            </summary>
+        </member>
+        <member name="F:LingvoNET.VerbTransition.Transitive">
+            <summary>
+            Переходный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.VerbTransition.Intransitive">
+            <summary>
+            Непереходный
+            </summary>
+        </member>
+        <member name="F:LingvoNET.VerbTransition.Undefined">
+            <summary>
+            Неопределенная
+            </summary>
+        </member>
+    </members>
+</doc>
